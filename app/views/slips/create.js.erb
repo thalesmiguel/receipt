@@ -1,0 +1,10 @@
+$("<%= j render partial: 'slip', locals: { slip: @slip } %>").addClass("animated fadeIn").appendTo('tbody#slips_list');
+
+$('#slip_value').val('');
+$('#slip_from').val('');
+$('#slip_description').val('');
+$('#slip_city').val('Araçatuba');
+$('#slip_date').val("<%= Time.now().strftime('%Y-%m-%d') %>");
+$('#slip_signature').val('Central Leilões LTDA');
+$('#slip_cpf').val('');
+$('#slip_rg').val('');

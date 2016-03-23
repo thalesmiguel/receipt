@@ -1,0 +1,5 @@
+var e = "";
+<% errors.each do |error| %>
+  e += '<%= error %>' + '\n\n';
+<% end %>
+alert(e);

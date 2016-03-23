@@ -1,0 +1,28 @@
+<div class="receiptForm" id="receiptForm">
+  <%#= render :partial => "form" %>
+  <div id="renderForm">
+    <%= render :partial => "form", :locals => {:slip => @slip} %>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <%- model_class = Slip -%>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= model_class.human_attribute_name(:recebemos_de) %></th>
+          <th><%= model_class.human_attribute_name(:valor) %></th>
+          <th><%= model_class.human_attribute_name(:proveniente_de) %></th>
+          <th><%= model_class.human_attribute_name(:cidate) %></th>
+          <th><%= model_class.human_attribute_name(:data) %></th>
+          <th><%= model_class.human_attribute_name(:assinatura) %></th>
+          <th><%=t '.actions', :default => t("helpers.ações") %></th>
+        </tr>
+      </thead>
+      <tbody id="slips_list">
+        <%= render @slips %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,111 @@
+<%= form_for slip, :html => { :class => "myFrom form-horizontal slip", :remote => true}  do |f| %>
+
+  <div class="card">
+    <% if slip.errors.any? %>
+      <div id="error_expl" class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= pluralize(slip.errors.count, "error") %> prohibited this slip from being saved:</h3>
+        </div>
+        <div class="panel-body">
+          <ul>
+          <% slip.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="card-image">
+      <div class="card-form">
+        <div class="col-lg-3">
+          <%#= image_tag("centralleiloes.jpg", :size => "90x90", :id => "slip_image_tag") %>
+          <%#= f.text_field :image, :class => 'form-control', :placeholder => 'Imagem' %>
+          <%= f.select :image, [['Central', 'centralleiloes.jpg'], ['Recibo', 'recibo.png']], {}, { :class => 'form-control' } %>
+        </div>
+        <div class="col-lg-6 receiptTitle">
+          <label class="receiptTitle">R E C I B O</label>
+        </div>
+        <div class="col-lg-3">
+          <%= f.text_field :value, :class => 'form-control', :placeholder => 'Valor' %>
+        </div>
+        <%#=f.error_span(:image) %>
+      </div>
+    </div>
+
+    <div class="card-content">
+      <div class="form-group">
+        <label class="control-label col-lg-2">Recebemos de </label>
+        <div class="col-lg-10">
+          <%= f.text_field :from, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:from) %>
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label col-lg-2">A importancia de</label>
+        <div class="col-lg-10">
+          <input id="valExtenso" class="form-control" type="text">
+        </div>
+        <%=f.error_span(:from) %>
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label col-lg-2">Proveniente de</label>
+        <div class="col-lg-10">
+          <%= f.text_area :description, :class => 'form-control', :rows => '3', :max => '10' %>
+        </div>
+        <%=f.error_span(:description) %>
+      </div>
+
+      <div class="form-group">
+        <span class="col-lg-7"></span>
+        <div class="col-lg-3">
+          <%= f.text_field :city, :class => 'form-control', :placeholder => 'Cidade', :value => 'Araçatuba' %>
+        </div>
+        <%=f.error_span(:city) %>
+        <div class="col-lg-2">
+          <%= f.date_field :date, :class => 'form-control', :value => Time.now.strftime('%Y-%m-%d') %>
+        </div>
+        <%=f.error_span(:date) %>
+      </div>
+
+      <div class="form-group">
+        <span class="col-lg-7"></span>
+        <div class="col-lg-5">
+          <%= f.text_field :signature, :class => 'form-control', :placeholder => 'Assinatura', :value => 'Central Leilões LTDA' %>
+        </div>
+        <%=f.error_span(:signature) %>
+      </div>
+
+      <div class="form-group">
+        <span class="col-lg-6"></span>
+        <%= f.label :cpf, :class => 'control-label col-lg-1' %>
+        <div class="col-lg-2">
+          <%= f.text_field :cpf, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:cpf) %>
+
+        <%= f.label :rg, :class => 'control-label col-lg-1' %>
+        <div class="col-lg-2">
+          <%= f.text_field :rg, :class => 'form-control' %>
+        </div>
+        <%=f.error_span(:rg) %>
+
+      </div>
+    </div>
+
+    <div class="card-action">
+      <div class="form-group">
+        <div id="fromCtrl" class="col-lg-10">
+          
+          <%= link_to t('.cancel', :default => t("helpers.links.novo")),
+            slips_path, :class => 'btn btn-default' %>
+
+          <%= f.submit nil, :class => 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% end %>

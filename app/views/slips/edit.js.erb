@@ -1,0 +1,2 @@
+$('div#renderForm').remove();
+$("<div id='renderForm'> <%= j render partial: 'form', locals: { slip: Slip.find( params[:id] )} %> </div").appendTo('div#receiptForm');

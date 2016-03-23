@@ -1,0 +1,1 @@
+$('tr#<%= @slip.id %>').replaceWith("<%= escape_javascript(render partial: 'slip', locals: { slip: @slip }) %>");

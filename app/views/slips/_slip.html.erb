@@ -1,0 +1,19 @@
+<tr id="<%= slip.id %>">
+  <td><%= slip.from %></td>
+  <td><%= slip.value %></td>
+  <td><%= slip.description %></td>
+  <td><%= slip.city %></td>
+  <td><%=l slip.date %></td>
+  <td><%= slip.signature %></td>
+  <td>
+    <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                edit_slip_path(slip), :class => 'btn btn-default btn-xs', :remote => true %>
+
+    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                slip_path(slip),
+                :remote => true,
+                :method => :delete,
+                :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Tem certeza que deseja excluir esse recibo?')) },
+                :class => 'btn btn-xs btn-danger' %>
+  </td>
+</tr>
