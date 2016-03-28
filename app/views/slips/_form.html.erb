@@ -27,7 +27,10 @@
           <label class="receiptTitle">R E C I B O</label>
         </div>
         <div class="col-lg-3">
-          <%= f.text_field :value, :class => 'form-control', :placeholder => 'Valor' %>
+          <div class="input-group">
+            <div class="input-group-addon">R$</div>
+            <%= f.text_field :value, :class => 'form-control', :placeholder => 'Valor' %>
+          </div>
         </div>
         <%#=f.error_span(:image) %>
       </div>
@@ -100,7 +103,9 @@
         <div id="fromCtrl" class="col-lg-10">
           
           <%= link_to t('.cancel', :default => t("helpers.links.novo")),
-            slips_path, :class => 'btn btn-default' %>
+            new_slip_path, :class => 'btn btn-default', :remote => true %>
+
+
 
           <%= f.submit nil, :class => 'btn btn-primary' %>
         </div>

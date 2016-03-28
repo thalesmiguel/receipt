@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  get 'slips/print' => 'slips#print'
+
+
   resources :slips
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

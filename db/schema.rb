@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20160317172235) do
 
   create_table "slips", force: :cascade do |t|
     t.string   "image"
-    t.decimal  "value"
+    t.string   "value"
     t.string   "from"
     t.text     "description"
     t.string   "city"

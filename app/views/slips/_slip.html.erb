@@ -1,11 +1,11 @@
 <tr id="<%= slip.id %>">
   <td><%= slip.from %></td>
-  <td><%= slip.value %></td>
+  <td><%= number_to_currency(slip.value) %></td>
   <td><%= slip.description %></td>
   <td><%= slip.city %></td>
   <td><%=l slip.date %></td>
   <td><%= slip.signature %></td>
-  <td>
+  <td id="tdCtrl">
     <%= link_to t('.edit', :default => t("helpers.links.edit")),
                 edit_slip_path(slip), :class => 'btn btn-default btn-xs', :remote => true %>
 

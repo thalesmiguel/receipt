@@ -4,6 +4,12 @@ class SlipsController < ApplicationController
 
   # GET /slips
   # GET /slips.json
+
+  def print
+    @slip = Slip.first
+    render :print, :layout => 'print'
+  end
+
   def index
     @slips = Slip.all
     @slip = Slip.new

@@ -31,6 +31,7 @@ gem "twitter-bootstrap-rails"
 gem 'devise-bootstrap-views'
 gem 'jquery-turbolinks'
 
+gem 'money-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

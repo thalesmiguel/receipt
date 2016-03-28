@@ -2,7 +2,7 @@ class CreateSlips < ActiveRecord::Migration
   def change
     create_table :slips do |t|
       t.string :image
-      t.decimal :value
+      t.string :value
       t.string :from
       t.text :description
       t.string :city

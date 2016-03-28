@@ -1,0 +1,2 @@
+$('div#renderForm').remove();
+$("<div id='renderForm'> <%= j render partial: 'form', :locals => {:slip => @slip} %> </div").appendTo('div#receiptForm');
