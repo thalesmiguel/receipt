@@ -13,7 +13,7 @@
 
   <div class="col-xs-12">
     <div class="form-group">
-      <label class="control-label col-xs-2 print-from">Recebemos de &nbsp</label>
+      <strong><label class="control-label col-xs-2 print-from">Recebemos de &nbsp</label></strong>
       <div class="col-xs-10 uppercase">
         <strong> <%= slip.from %> </strong>
       </div>
@@ -22,7 +22,7 @@
 
   <div class="col-xs-12">
     <div class="form-group">
-      <label class="control-label col-xs-2">A importancia de </label>
+      <strong><label class="control-label col-xs-2">A importancia de </label></strong>
       <div class="col-xs-10">
         <input id="valExtenso<%=slip.id%>" class="form-control print-full-value uppercase" type="text" disabled="true" >
       </div>
@@ -31,14 +31,14 @@
 
   <div class="col-xs-12">
     <div class="form-group">
-      <label class="control-label">Proveniente de</label>
+      <strong><label class="control-label">Proveniente de</label></strong>
     </div>
   </div>
 
   <div class="col-xs-12">
     <div class="form-group">
       <div class="print-description">
-        <%= slip.description %>
+        <%= slip.description.gsub('&nbsp', 'BOZO') %>
       </div>
     </div>
   </div>

@@ -55,6 +55,10 @@ p.print-receipt{
   white-space: pre-line;
 }
 
+.print-description:first-line {
+    line-height: 0px;
+}
+
 .print-city{
   margin-bottom: 45px !important;
   text-align: right;
@@ -67,7 +71,6 @@ p.print-receipt{
 
 .print-full-value{
   width: 99%;
-  margin-left: 5px;
   font-weight: bold;
   background-color: lightgray;
   border-style: solid;
