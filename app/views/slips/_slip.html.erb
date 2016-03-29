@@ -1,7 +1,7 @@
 <tr id="<%= slip.id %>">
-  <td><%= slip.from %></td>
+  <td><abbr title= '<%= slip.from %>'> <%= slip.from[0..40] %></abbr></td>
   <td><%= number_to_currency(slip.value) %></td>
-  <td><%= slip.description %></td>
+  <td><abbr title= '<%= slip.description %>'> <%= slip.description[0..40] %></abbr></td>
   <td><%= slip.city %></td>
   <td><%=l slip.date %></td>
   <td><%= slip.signature %></td>

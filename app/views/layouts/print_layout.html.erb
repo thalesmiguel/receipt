@@ -8,14 +8,13 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "print", :media => "all" %>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "jquery" %>
+    <%= javascript_include_tag "extenso" %>
   </head>
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 print-body">
-          <%= yield %>
-        </div>
+        <%= yield %>
       </div><!--/row-->
     </div> <!-- /container -->
   </body>

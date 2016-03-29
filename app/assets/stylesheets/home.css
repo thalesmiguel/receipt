@@ -1,3 +1,10 @@
 .logoImg{
   height: 90px;
 }
+
+footer {
+    position: fixed;
+    height: 40px;
+    bottom: 0;
+    width: 100%;
+}

@@ -3,6 +3,7 @@
   // border-style: groove;
   // border-width: thin;
   // padding: 10px;
+  background-color: #FFFFFF;
 }
 
 .receiptTitle{
@@ -13,4 +14,14 @@
 
 label.receiptTitle{
   vertical-align: sub;
+}
+
+#printButton{
+  width: 100% !important;
+}
+
+table{
+  display: block;
+  height: 150px;
+  overflow-y: scroll;
 }

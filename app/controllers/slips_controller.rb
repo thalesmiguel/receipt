@@ -6,8 +6,9 @@ class SlipsController < ApplicationController
   # GET /slips.json
 
   def print
-    @slip = Slip.first
-    render :print, :layout => 'print'
+    print_params = params[:print_slips].split(',')
+    @print_slips = Slip.find(print_params)
+    render :print, :layout => 'print_layout'
   end
 
   def index

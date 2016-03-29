@@ -6,7 +6,7 @@ String.prototype.extenso = function(c){
         ["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"],
         ["dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"],
         ["cem", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos", "setecentos", "oitocentos", "novecentos"],
-        ["mil", "milhão", "bilhão", "trilh?o", "quadrilh?o", "quintilh?o", "sextilh?o", "setilh?o", "octilh?o", "nonilh?o", "decilh?o", "undecilh?o", "dodecilh?o", "tredecilh?o", "quatrodecilh?o", "quindecilh?o", "sedecilh?o", "septendecilh?o", "octencilh?o", "nonencilh?o"]
+        ["mil", "milhão", "bilhão", "trilhão", "quadrilh?o", "quintilh?o", "sextilh?o", "setilh?o", "octilh?o", "nonilh?o", "decilh?o", "undecilh?o", "dodecilh?o", "tredecilh?o", "quatrodecilh?o", "quindecilh?o", "sedecilh?o", "septendecilh?o", "octencilh?o", "nonencilh?o"]
     ];
     var a, n, v, i, n = this.replace(c ? /[^,\d]/g : /\D/g, "").split(","), e = " e ", $ = "real", d = "centavo", sl;
     for(var f = n.length - 1, l, j = -1, r = [], s = [], t = ""; ++j <= f; s = []){

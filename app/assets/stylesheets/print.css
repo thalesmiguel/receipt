@@ -1,3 +1,12 @@
+html{
+  width: 21cm;
+  margin: auto;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
 body{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -6,8 +15,16 @@ body{
   background-color: #ffffff;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.print-body{
+  width: 97% !important;
+  padding: 10px !important;
+  border-style: groove;
+  margin-bottom: 20px !important;
+  page-break-inside: avoid !important;
+}
+
+.print-header{
+  padding-bottom: 20px;
 }
 
 .print-receipt{
@@ -18,15 +35,6 @@ body{
 
 p.print-receipt{
   vertical-align: sub;
-}
-
-.print-body{
-  padding: 10px !important;
-  border-style: groove;
-}
-
-.print-header{
-  padding-bottom: 20px;
 }
 
 .print-from{
@@ -57,7 +65,8 @@ p.print-receipt{
 }
 
 .print-full-value{
-  width: 100%;
+  width: 99%;
+  margin-left: 5px;
   font-weight: bold;
   background-color: lightgray;
   border-style: solid;

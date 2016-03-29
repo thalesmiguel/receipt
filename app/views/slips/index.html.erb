@@ -7,6 +7,10 @@
 
 <div class="card">
   <div class="card-content">
+    <%= link_to slips_print_path(), :id => "printButton", :class => 'btn btn-primary btn-lg disabled', :target => "_blank" do %>
+      <span class="glyphicon glyphicon-print"></span> Imprimir   
+    <% end %>
+    
     <%- model_class = Slip -%>
     <table class="table table-hover" id="dataTable">
       <thead>
